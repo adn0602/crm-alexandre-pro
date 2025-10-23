@@ -1,0 +1,102 @@
+/* Estados de loading e desabilitado */
+.btn-primary:disabled,
+.btn-cancel:disabled,
+.btn-edit:disabled,
+.btn-delete:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn-edit:disabled:hover,
+.btn-delete:disabled:hover {
+  background: none !important;
+}
+
+/* Loading spinner opcional */
+.loading-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Estilos para o contador de caracteres */
+.input-with-counter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.char-counter {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: #94a3b8;
+  background: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Ajuste o padding do input para dar espaço ao contador */
+.input-with-counter input {
+  padding-right: 70px !important;
+}
+
+/* Estilo quando está perto do limite */
+.char-counter.warning {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.char-counter.error {
+  color: #ef4444;
+  font-weight: 600;
+}
+/* Estilos para o contador de caracteres */
+.input-with-counter {
+  position: relative; /* ESSENCIAL para posicionar o char-counter absolutamente */
+  display: flex; /* Adicionei isso para garantir que o input preencha o espaço */
+  flex-direction: column;
+}
+
+.char-counter {
+  position: absolute; /* ESSENCIAL para sobrepor o texto */
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: #94a3b8;
+  background: white; /* Para cobrir o input por baixo */
+  padding: 2px 6px;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 10; /* Garante que ele fique sobre o input */
+}
+
+/* Ajuste o padding do input para dar espaço ao contador */
+.input-with-counter input {
+  padding-right: 70px !important; /* Move o texto do input para a esquerda */
+}
+
+/* Estilo quando está perto do limite */
+.char-counter.warning {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.char-counter.error {
+  color: #ef4444;
+  font-weight: 600;
+}
